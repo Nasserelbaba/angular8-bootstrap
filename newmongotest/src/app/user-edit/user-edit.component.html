@@ -1,0 +1,21 @@
+    <div class="back">
+        <form [formGroup]="angForm">
+            <div class="mainDiv">
+                <div class="row msg"> Update an Account!</div>
+                <div class="row Name">
+                    <div class="col col-6 "><input class="form-control mail" formControlName="FirstName" #FirstName
+                            type="text" name="email" placeholder=" First Name"></div>
+                    <div class="col col-6"><input class="form-control mail" type="text" formControlName="LastName"
+                            #LastName placeholder="Last Name"></div>
+                </div>
+                <div class="row mail"><input class="form-control mail" type="text" formControlName="Email" #Email
+                        placeholder="Email Address..."> </div>
+                <div class="row password"><input class="form-control password" type="password"
+                        formControlName="Password" #Password placeholder="Password"> </div>
+                <div class="row checkbox"><input type="checkbox" name="checkbox">Remember Me</div>
+                <div class="row"><a (click)="updateUser(FirstName.value,LastName.value,Email.value,Password.value)"
+                        type="submit" class="btn btn-login btn-primary btn-user btn-block">Change </a></div>
+                <div class="dog"><img class="dog" src="../../assets/dog.jpeg"></div>
+            </div>
+        </form>
+    </div>
