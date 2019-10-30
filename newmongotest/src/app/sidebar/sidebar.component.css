@@ -6,8 +6,9 @@
   left: 0;
   background-color: #263238;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0.1s;
   padding-top: 8px;
+  width: 0%;
 }
 .sidenav a {
   padding: 8px 8px 8px 32px;
@@ -20,10 +21,8 @@
 
   
 }
-.closebtn{
-  border-bottom: unset;
-  color: white;
-}
+
+
 a{
   border-bottom: 1px solid #455A64;
 }
@@ -39,7 +38,10 @@ a{
   font-size: 36px;
   margin-left: 50px;
 }
-
+a.closebtn.x{
+font-size: 110% !important;
+border-bottom: unset;
+}
 #main {
   position: absolute;
   z-index: 1;
@@ -51,112 +53,23 @@ a{
 @media screen and (max-height: 450px) {
   .sidenav {padding-left: 5px;}
 }
+@media only screen and (max-width: 991px) {
+  .sidenav a {
+    padding: 12px 12px 50px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    color:white;
+    z-index: 1;
+    transition: 0.3s;
 
+  
+    
+  }
+  .closebtn{
+    border-bottom: unset;
+    color: white;
+    
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
-
-body {
-  overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
 }
-
-
-#viewport {
-  padding-left: 250px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-#content {
-  width: 100%;
-  position: relative;
-  margin-right: 0;
-}
-
-
-#sidebar {
-  z-index: 1000;
-  position: fixed;
-  left: 250px;
-  width: 200px;
-  height: 100%;
-  margin-left: -250px;
-  overflow-y: auto;
-  background: #37474F;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-#sidebar header {
-  background-color: #263238;
-  font-size: 20px;
-  line-height: 52px;
-  text-align: center;
-}
-
-#sidebar header a {
-  color: #fff;
-  display: block;
-  text-decoration: none;
-}
-
-#sidebar header a:hover {
-  color: #fff;
-}
-
-
-
-#sidebar  a{
-  background: none;
-  color: #CFD8DC;
-  font-size: 14px;
-  padding: 16px 24px;
-}
-
-#sidebar a:hover{
-  background: none;
-  color: #ECEFF1;
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: column;
-}
-.flex-container > div{
-  left: 20px;
-  padding: 20px;
-  font-size: 20px;
-  display: block;
-  text-align: center;
-  border-bottom: 1px solid #455A64;
-}
-#sidebar  a{
-  margin-right: 16px;
-} */

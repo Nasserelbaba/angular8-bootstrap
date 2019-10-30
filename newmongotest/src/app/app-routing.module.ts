@@ -4,6 +4,7 @@ import { UserAddComponent } from './user-add/user-add.component';
 import { UserGetComponent } from './user-get/user-get.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,9 @@ const routes: Routes = [
   },{
     path:'sidebar' ,
     component:SidebarComponent
+  },{
+    path:"signin" ,
+    component:SignInComponent
   }
 ];
 

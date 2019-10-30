@@ -1,18 +1,14 @@
 <div class="back">
-    <form [formGroup]="angForm">
+    <form [formGroup]="angForm" action="GET">
 <div class="mainDiv">
-    <div class="row msg"> Create an Account!</div>
-    <div class="row Name"> <div class="col col-6 "><input class="form-control mail" formControlName="FirstName" #FirstName type="text" name="email" placeholder=" First Name"></div>
-    <div class="col col-6"><input class="form-control mail" type="text" formControlName="LastName" #LastName placeholder="Last Name"></div>
-    </div>
+    <div class="row msg"> Sign In!</div>
     <div class="row mail"><input class="form-control mail" type="text" formControlName="Email" #Email placeholder="Email Address..."> </div>
     <div class="row password"><input class="form-control password" type="password" formControlName="Password" #Password placeholder="Password"> </div>
     <div class="row checkbox"><input type="checkbox" name="checkbox">Remember Me</div>
-    <div class="row"><a (click)="checkUser(FirstName.value,LastName.value,Email.value,Password.value)" class="btn btn-login btn-primary btn-user btn-block" >Create </a></div>
-    <div class="row"><a class="btn btn-google btn-danger btn-block" href="#">Create with Google</a></div>
-    <div class="row"><a class="btn btn-facebook btn-primary btn-block active" href="#">Create With Facebook</a></div>
+    <div class="row"><a (click)="checkUser(Email.value,Password.value)" class="btn btn-login btn-primary btn-user btn-block" >Sign In </a></div>
+    <div class="row"><a class="btn btn-google btn-danger btn-block" href="#">Sign In With Google</a></div>
+    <div class="row"><a class="btn btn-facebook btn-primary btn-block active" href="#">Sign In With Facebook</a></div>
     <div class="row fp"><a href="">Forget Password</a></div>
-    <div class="row ca"><a href="">Already have an account? Login!</a></div>
 <div class="dog"><img class="dog"  src="../../assets/dog.jpeg"></div>
 <div class="cat"><img class="swingimage" src="../../assets/cat.jpg" /></div>
 </div>

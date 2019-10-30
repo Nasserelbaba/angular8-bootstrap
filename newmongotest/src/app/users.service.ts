@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
 
   uri = 'http://localhost:4000/users';
-  urs = 'http://localhost:4000/check';
   constructor(private http: HttpClient) { }
   addUser(FirstName,LastName,Email, Password) {
     const obj = {
@@ -45,9 +43,11 @@ deleteUser(id) {
             .http
             .get(`${this.uri}/delete/${id}`);
 }
-checkUser(Email){
-  return this
-  .http
-  .get(`${this.urs}${Email}`);
+checkUser(Email,Password){
+  const obj2 = {
+    Email,Password
+  };
+  return this 
+  .http.post(`${this.uri}/check`,obj2).subscribe(res=>console.log("done"));
 }
 }

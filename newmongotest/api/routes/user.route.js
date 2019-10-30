@@ -60,10 +60,21 @@ userRoutes.route('/').get(function (req, res) {
       });
   });
   // check if user is exist
-  userRoutes.route('/check/:Email').get(function (req, res) {
-    User.find({_Email: req.params.Email}, function(err, user){
-        if(err) res.json(err);
-        else res.json('you are signed in');
-    });
+  userRoutes.route('/check').post(function (req, res) {
+    let user2 = new User(req.body);
+    User.findOne({$and:[{Email :user2.Email},{Password:user2.Password}]}, function (err, user){
+    if(user) console.log("signed in");
+    else res.json(err);
+  });
+   /*  userRoutes.route('/add').post(function (req, res) {
+      let user = new User(req.body);
+      user.save()
+        .then(user => {
+          res.status(200).json({'User': 'user has been added successfully'});
+        })
+        .catch(err => {
+        res.status(400).send("unable to save to database");
+        });
+    }); */
 });
 module.exports = userRoutes;
