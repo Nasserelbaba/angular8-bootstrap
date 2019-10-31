@@ -1,11 +1,12 @@
 <div class="back">
-    <form [formGroup]="angForm" action="GET">
+    <form [formGroup]="angForm" novalidate >
 <div class="mainDiv">
     <div class="row msg"> Sign In!</div>
-    <div class="row mail"><input class="form-control mail" type="text" formControlName="Email" #Email placeholder="Email Address..."> </div>
+    <div class="row mail"><input class="form-control mail" type="text" formControlName="Email" #Email placeholder="Email Address..."  >
+    </div>
     <div class="row password"><input class="form-control password" type="password" formControlName="Password" #Password placeholder="Password"> </div>
     <div class="row checkbox"><input type="checkbox" name="checkbox">Remember Me</div>
-    <div class="row"><a (click)="checkUser(Email.value,Password.value)" class="btn btn-login btn-primary btn-user btn-block" >Sign In </a></div>
+    <div class="row"><button (click)="checkUser(Email.value,Password.value)" class="btn btn-login btn-primary btn-user btn-block" [disabled]="angForm.invalid" >Sign In </button></div>
     <div class="row"><a class="btn btn-google btn-danger btn-block" href="#">Sign In With Google</a></div>
     <div class="row"><a class="btn btn-facebook btn-primary btn-block active" href="#">Sign In With Facebook</a></div>
     <div class="row fp"><a href="">Forget Password</a></div>

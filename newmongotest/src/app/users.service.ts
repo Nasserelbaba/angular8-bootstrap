@@ -48,6 +48,6 @@ checkUser(Email,Password){
     Email,Password
   };
   return this 
-  .http.post(`${this.uri}/check`,obj2).subscribe(res=>console.log("done"));
+  .http.post(`${this.uri}/check`,obj2);
 }
 }

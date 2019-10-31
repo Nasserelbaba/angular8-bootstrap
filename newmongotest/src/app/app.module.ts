@@ -11,6 +11,10 @@ import { UserGetComponent } from './user-get/user-get.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { ChartComponent } from './chart/chart.component';
+import { ChartModule } from 'angular-highcharts';
+import { HighchartsChartComponent } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
@@ -19,13 +23,17 @@ import { SignInComponent } from './sign-in/sign-in.component';
     UserGetComponent,
     UserEditComponent,
     SidebarComponent,
-    SignInComponent
+    SignInComponent,
+    HomePageComponent,
+    ChartComponent,
+    HighchartsChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartModule
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]

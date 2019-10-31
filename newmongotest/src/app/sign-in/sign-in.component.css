@@ -125,3 +125,8 @@ input[type="submit"] {
 
 
 }
+/* .password ,.mail{
+    display: block;
+    direction: rtl;
+    float: left;
+} */

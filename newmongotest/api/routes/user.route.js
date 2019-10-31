@@ -63,7 +63,7 @@ userRoutes.route('/').get(function (req, res) {
   userRoutes.route('/check').post(function (req, res) {
     let user2 = new User(req.body);
     User.findOne({$and:[{Email :user2.Email},{Password:user2.Password}]}, function (err, user){
-    if(user) console.log("signed in");
+    if(user) res.json(user);
     else res.json(err);
   });
    /*  userRoutes.route('/add').post(function (req, res) {

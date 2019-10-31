@@ -5,6 +5,8 @@ import { UserGetComponent } from './user-get/user-get.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { ChartComponent } from './chart/chart.component';
 
 
 const routes: Routes = [
@@ -25,6 +27,14 @@ const routes: Routes = [
   },{
     path:"signin" ,
     component:SignInComponent
+  },
+  {
+    path :"home", 
+    component:HomePageComponent
+  },
+  {
+    path : 'chart',
+    component:ChartComponent
   }
 ];
 
